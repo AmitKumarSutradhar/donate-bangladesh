@@ -142,7 +142,7 @@
 
                           </form>
                           <div class="card-actions justify-end">
-                            <button class="btn bg-[#B4F461] w-full ">Donate Now</button>
+                            <button class="btn bg-[#B4F461] w-full" onclick="my_modal_5.showModal()">Donate Now</button>
                           </div>
                         </div>
                     </div>
@@ -154,5 +154,25 @@
     <footer>
 
     </footer>
+
+
+    <!-- Modal Start -->
+        <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+            <div class="modal-box text-center">
+                <h2 class="text-lg font-bold">Congrates!</h2>
+                <div class="mx-auto" style="width: 30px; height: 30px;">
+                    <img src="assets/coin.png" alt="" >
+                </div>
+                
+                <p class="py-4">You Have Donated for Humankind.</p>
+                <div class="modal-action">
+                    <form method="dialog">
+                        <!-- if there is a button in form, it will close the modal -->
+                        <button class="btn">Close Confirmation</button>
+                    </form>
+                </div>
+            </div>
+        </dialog>
+    <!-- Modal End -->
 </body>
 </html>

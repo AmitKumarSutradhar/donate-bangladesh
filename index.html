@@ -66,11 +66,12 @@
         <section>
             <div class="container mx-auto">
                 <div class="text-center">
-                    <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg bg-[#B4F461]">Donation</button>
-                    <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">History</button>
+                    <button id="donation-toggle-btn" class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg bg-[#B4F461]">Donation</button>
+                    <button id="history-toggle-btn" class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">History</button>
                 </div>
 
-                <div class="">
+                <!-- Donation Content  -->
+                <div id="donation-content" class="donation-body">
                     <div class="card lg:card-side bg-base-100 shadow-xl">
                         <figure class="w-2/4">
                             <img
@@ -120,7 +121,6 @@
                           </div>
                         </div>
                     </div>
-
                     
                     <div class="card lg:card-side bg-base-100 shadow-xl">
                         <figure class="w-2/4">
@@ -146,7 +146,17 @@
                           </div>
                         </div>
                     </div>
-                      
+                </div>
+
+                <!-- History Content  -->
+                <div id="history-content" class="history-content hidden">
+                    <div class="card lg:card-side bg-base-100 shadow-xl">
+                        <div class="card-body">
+                          <h2 class="card-title">Aid for Injured in the Quota Movement</h2>
+                          <p> The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. </p>
+                          <div class="divider"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -174,5 +184,10 @@
             </div>
         </dialog>
     <!-- Modal End -->
+
+
+    <script src="js/utilities.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/donation.js"></script>
 </body>
 </html>

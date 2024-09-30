@@ -23,7 +23,7 @@ function toggleButtonById(id, toggleButton){
     document.getElementById(toggleButton).classList.add('bg-[#B4F461]');
 }
 
-function calculateTotalAmountAfterDonation(donationAmount, totalCollectionAmount, collectionAmountId){
+function calculateTotalAmountAfterDonation(donationAmount, totalCollectionAmount, collectionAmountId, donationEventName){
     const mainBalanceAmount = getTextFieldValueById('main-balance-amount');
 
     const balanceAfterDonation = mainBalanceAmount - donationAmount;
@@ -34,5 +34,17 @@ function calculateTotalAmountAfterDonation(donationAmount, totalCollectionAmount
     document.getElementById('main-balance-amount').innerText = balanceAfterDonation;
     collectionAmountId.innerText = collectionAmountAfterDonation;
 
+    const div = document.createElement('div');
+    div.innerHTML = `
+                <div class="card lg:card-side bg-base-100 shadow-xl"></div>
+                    <div class="card-body">
+                        <h2 class="card-title text-center">${donationAmount} Taka is Donated for ${ donationEventName}</h2>
+                        <p>Date: ${ new Date() } </p>
+                        <div class="divider"></div>
+                    </div>
+                </div>
+    `;
 
+    document.getElementById('history-content').appendChild(div);
+    
 }

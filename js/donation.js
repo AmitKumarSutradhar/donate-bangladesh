@@ -5,7 +5,8 @@ document.getElementById('noakhali-donation-btn').addEventListener('click', funct
     const totalCollectionAmount = getTextFieldValueById('nohakhali-donation-collection-amount'); 
     const collectionAmountId = document.getElementById('nohakhali-donation-collection-amount');
 
-    const calculatedBalance = calculateTotalAmountAfterDonation(donationAmount, totalCollectionAmount, collectionAmountId);
+    const donationEventName = "Donate for Flood at Noakhali, Bangladesh";
+    const calculatedBalance = calculateTotalAmountAfterDonation(donationAmount, totalCollectionAmount, collectionAmountId, donationEventName);
 
 });
 
@@ -15,7 +16,8 @@ document.getElementById('feni-donation-btn').addEventListener('click', function(
     const totalCollectionAmount = getTextFieldValueById('feni-donation-collection-amount'); 
     const collectionAmountId = document.getElementById('feni-donation-collection-amount');
 
-    const calculatedBalance = calculateTotalAmountAfterDonation(donationAmount, totalCollectionAmount, collectionAmountId);
+    const donationEventName = "Donate for Flood Relief in Feni,Bangladesh";
+    const calculatedBalance = calculateTotalAmountAfterDonation(donationAmount, totalCollectionAmount, collectionAmountId, donationEventName);
 });
 
 document.getElementById('quota-movement-btn').addEventListener('click', function(){
@@ -24,5 +26,7 @@ document.getElementById('quota-movement-btn').addEventListener('click', function
     const totalCollectionAmount = getTextFieldValueById('quota-movement-amount'); 
     const collectionAmountId = document.getElementById('quota-movement-amount');
 
-    const calculatedBalance = calculateTotalAmountAfterDonation(donationAmount, totalCollectionAmount, collectionAmountId);
+    
+    const donationEventName = "Aid for Injured in the Quota Movement";
+    const calculatedBalance = calculateTotalAmountAfterDonation(donationAmount, totalCollectionAmount, collectionAmountId, donationEventName);
 });

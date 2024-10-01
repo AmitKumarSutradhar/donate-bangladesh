@@ -8,6 +8,8 @@ document.getElementById('noakhali-donation-btn').addEventListener('click', funct
     const donationEventName = "Donate for Flood at Noakhali, Bangladesh";
     const calculatedBalance = calculateTotalAmountAfterDonation(donationAmount, totalCollectionAmount, collectionAmountId, donationEventName);
 
+    document.getElementById("donation-complete").showModal();
+
 });
 
 document.getElementById('feni-donation-btn').addEventListener('click', function(){
@@ -18,6 +20,8 @@ document.getElementById('feni-donation-btn').addEventListener('click', function(
 
     const donationEventName = "Donate for Flood Relief in Feni,Bangladesh";
     const calculatedBalance = calculateTotalAmountAfterDonation(donationAmount, totalCollectionAmount, collectionAmountId, donationEventName);
+
+    document.getElementById("donation-complete").showModal();
 });
 
 document.getElementById('quota-movement-btn').addEventListener('click', function(){
@@ -29,4 +33,6 @@ document.getElementById('quota-movement-btn').addEventListener('click', function
     
     const donationEventName = "Aid for Injured in the Quota Movement";
     const calculatedBalance = calculateTotalAmountAfterDonation(donationAmount, totalCollectionAmount, collectionAmountId, donationEventName);
+
+    document.getElementById("donation-complete").showModal();
 });
